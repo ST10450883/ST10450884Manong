@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         compareButton.setOnClickListener {
             val userInput = ageEditText.text.toString()
+            //Checks if the user typed in a code
             if (userInput.isEmpty()) {
                 resultTextView.text = "Please enter a valid age – it must be a whole " +
                         "number without any decimals or text."
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 resultTextView.text = "Please enter a valid age – it must be a whole number " +
                         "without any decimals or text."
             } else {
+                //checks if the age is in the range between 20 to 100
                 if (userAge < 20 || userAge > 100) {
                     resultTextView.text = "Please enter an age between 20 and 100."
                     ageEditText.text.clear()
